@@ -40,7 +40,7 @@ app.use(shopRoutes);
 app.use(errorController.get404);
 
 mongoose
-  .connect("mongodb+srv://online-store:LxzEWtLOetuQMweQ@cluster0.ppdff.mongodb.net/shop?retryWrites=true&w=majority")
+  .connect("mongodb+srv://<name>:<pass>@cluster0.ppdff.mongodb.net/<db>?retryWrites=true&w=majority")
   .then(result => {
     User.findOne().then(user => {
       if (!user) {
